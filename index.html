@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoElite | Concesionario de Autos Deportivos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <img src="logo.png" class="logo" alt="AutoElite">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-texto">
+      <h1>AutoElite</h1>
+      <p>Los mejores autos deportivos de lujo en un solo lugar</p>
+    </div>
+  </section>
+
+  <section id="catalogo" class="catalogo">
+    <h2>Explora por marca</h2>
+    <div class="filtros">
+      <select id="marca" onchange="cargarModelos()">
+        <option value="">-- Selecciona una marca --</option>
+        <option value="Ferrari">Ferrari</option>
+        <option value="Lamborghini">Lamborghini</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Porsche">Porsche</option>
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+      </select>
+      <select id="modelo" onchange="mostrarInfo()" style="display:none;">
+        <option value="">-- Selecciona un modelo --</option>
+      </select>
+    </div>
+    <div id="infoCarro" class="info-carro" style="display:none;"></div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <label>Nombre</label>
+      <input type="text" required>
+      <label>Correo electrónico</label>
+      <input type="email" required>
+      <label>Mensaje</label>
+      <textarea rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AutoElite | Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Botón de WhatsApp -->
+  <a href="https://wa.me/573001112233" class="whatsapp" target="_blank">
+    Habla con un asesor
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
